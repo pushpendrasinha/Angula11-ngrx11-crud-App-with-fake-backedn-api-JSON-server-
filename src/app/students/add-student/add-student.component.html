@@ -1,0 +1,62 @@
+<div class="container d-flex justify-content-center">
+    <div class="card mt-5 me-5" style="width: 70%;">
+        <div class="card-header bg-dark text-light">
+            Add New Student
+        </div>
+        <form class="p-2 row g-3" >
+            <div class="form-group col">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="First Name" name="firstname" 
+                [(ngModel)]= "Student.firstname"/>
+            </div>
+            <div class="form-group col">
+                <label>Middle Name</label>
+                <input type="text" class="form-control" placeholder="Middle Name" name="middlename" 
+                [(ngModel)]= "Student.middlename"/>
+            </div>
+            <div class="form-group col">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" name="lastname" 
+                [(ngModel)]= "Student.lastname"/>
+            </div>
+
+            <div class="form-row row g-3">
+                <div class="form-group col">
+                    <label>Email Id</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@example.com"
+                        name="email" [(ngModel)]= "Student.email"/>
+                </div>
+                <div class="form-group col">
+                    <label>Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="mobile" 
+                    [(ngModel)]= "Student.mobile"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label hmlfor="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+                        name="address" [(ngModel)]= "Student.address"/>
+                </div>
+            </div>
+
+            <div class="form-group col">
+                <label>City</label>
+                <input type="text" class="form-control" id="inputCity" name="city" 
+                [(ngModel)]= "Student.city"/>
+            </div>
+            <div class="form-group col">
+                <label>State</label>
+                <input type="text" class="form-control" id="inputCity" name="state" 
+                [(ngModel)]= "Student.state"/>
+            </div>
+
+            <div class="form-row">
+                <button routerLink="/students/list" class="btn btn-dark btn-sm" >Go back</button>
+                <button type="submit" class="btn btn-success btn-sm mx-2" (click)="AddorUpdate()" > {{Student.id ? 'Update' : 'Add' }} </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+

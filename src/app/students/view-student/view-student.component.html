@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center">
+    <div class="card mt-5" style="width: 60%;">
+        <div class="card-header bg-dark text-white">
+          Hello {{student.firstname}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Full Name:- {{student.firstname}} {{student.middlename}} {{student.lastname}} </h5>
+          <p class="card-text">Email:- {{student.email}} </p>
+          <p class="card-text">Contact No.:- {{student.mobile}} </p>
+          <p class="card-text">Complete Address:- {{student.address}}, {{student.city}}, {{student.state}} </p>
+          <button routerLink="/students/list" class="btn btn-dark btn-sm" >Go back</button>
+          <button (click)="updateStudent(student.id)" class="btn btn-success btn-sm mx-2" >Update</button>
+        </div>
+      </div>
+</div>

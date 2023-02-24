@@ -1,0 +1,25 @@
+<div class="container">
+<button class="btn btn-sm btn-primary mt-5" routerLink="/students/add" >Add Student</button>  
+<table class="table table-success table-striped mt-2">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of Students | async " >
+          <th > {{student.firstname}} </th>
+          <td> {{student.email}} </td>
+          <td> {{student.mobile}} </td>
+          <td> 
+          <button class="btn btn-sm btn-primary" (click)="viewStudent(student.id)" >View</button>  
+          <button class="btn btn-sm btn-danger mx-2" (click)="deleteStudent(student.id)" >Delete</button>  
+          <button class="btn btn-sm btn-success " (click)="updateStudent(student.id)" >Edit</button>  
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
